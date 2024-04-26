@@ -1,0 +1,85 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Buttons'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-1-1920x900'
+  })
+
+  +page-title({
+    title: pageName,  
+    text: 'Easily insert buttons and call-to-actions in any page, <br class="veil reveal-xs-block"> use amazing custom options to spice up your pages.'
+  }) 
+
+  // Button Sizes
+  section.section.section-md.bg-white.text-center
+    .container
+      h4 Button Sizes
+      p 4 different sizes: super, large, default and small.
+      .group-xl.group-middle.buttons-group
+        .button.button-xl.button-primary.button-ujarak Super Size
+        .button.button-lg.button-secondary.button-ujarak Large size
+        .button.button-secondary.button-ujarak Default size
+        .button.button-sm.button-secondary.button-ujarak Small size
+  ="\n"
+
+  .divider
+
+  // Button Shapes
+  section.section.section-md.bg-white.text-center
+    .container
+      h4 Button Shapes
+      p 4 different shapes: default, round, round 2, and circle.
+      .group-xl.group-middle.buttons-group
+        .button.button-secondary.button-ujarak Default
+        .button.button-secondary.button-ujarak.button-round-1 Round 1
+        .button.button-secondary.button-ujarak.button-round-2 Round 2
+        .button.button-secondary.button-ujarak.button-circle Circle
+  ="\n"
+
+  .divider
+
+  // Buttons with Icons
+  section.section.section-md.bg-white.text-center
+    .container
+      h4 Buttons with Icons
+      p Buttons are fully integrated with 900+ icons.
+      .group-xl.group-middle.buttons-group
+        .button.button-icon.button-icon-right.button-secondary.button-ujarak
+          span.icon.material-icons-person_outline
+          | Icon right
+        .button.button-icon.button-icon-left.button-secondary.button-ujarak
+          span.icon.material-icons-info_outline
+          | Icon left
+        .button.button-icon.button-icon-right.btn-white-bordered.button-ujarak
+          span.icon.material-icons-person_outline
+          | Icon right
+        .button.button-icon.button-icon-left.btn-white-bordered.button-ujarak
+          span.icon.material-icons-info_outline
+          | Icon left
+  ="\n"
+ 
+  .divider 
+
+  // Buttons with Shadow
+  section.section.section-md.bg-white.text-center
+    .container
+      h4 Buttons with Shadow
+      p Enhance your buttons with a shadow effect.
+      .group-xl.group-middle.buttons-group
+        .button.button-secondary.button-ujarak.button-circle.button-shadow Shadow
+        .button.button-ghost.button-circle.button-shadow Shadow
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic
+

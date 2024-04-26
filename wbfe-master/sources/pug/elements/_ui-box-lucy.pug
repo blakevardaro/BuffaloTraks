@@ -1,0 +1,12 @@
+mixin box-lucy(obj)
+  // Box Lucy
+  article.box-lucy
+    .box-lucy__aside
+      .box-lucy__icon-outer
+        svg.box-lucy__icon-shape(xmlns='http://www.w3.org/2000/svg' width='59px', height='68px')
+          path(fill-rule='evenodd' stroke-width='2px', stroke-linecap='butt', stroke-linejoin='miter', fill='none', d='M29.000,66.000 L1.012,49.750 L1.012,17.250 L29.000,1.000 L56.988,17.250 L56.988,49.750 L29.000,66.000 Z')
+        span.box-lucy__icon(class=obj.icon)
+        
+      h5.box-lucy__title=obj.title
+    .box-lucy__main
+      block

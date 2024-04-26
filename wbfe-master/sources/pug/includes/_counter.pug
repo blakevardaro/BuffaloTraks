@@ -1,0 +1,40 @@
+//- Counter
+	@param {object} obj
+	@param {number} obj.value
+	@param {string} [obj.title]
+	@param {string} [obj.postfix]
+	@param {number} [obj.duration]
+mixin counter( obj )
+	//Counter
+	article.box-counter.box-counter_modern&attributes( attributes )
+		.box-counter__main
+			.box-counter__icon(class=obj.icon)
+			if(obj.prefix)
+				.counter-prefix= obj.prefix
+			.counter( data-speed= obj.duration )= obj.value
+			if ( obj.postfix )
+				.counter-postfix= obj.postfix
+			else if(obj.smalltop)
+				.small.small_top= obj.smalltop
+			else if(obj.small)
+				.small= obj.small
+		if ( obj.title )
+			p.box-counter__title= obj.title
+
+
+mixin counter-classic( obj )
+	//Counter
+	article.box-counter&attributes( attributes )
+		.box-counter__main
+			if(obj.prefix)
+				.counter-prefix= obj.prefix
+			.counter( data-speed= obj.duration )= obj.value
+			if ( obj.postfix )
+				.counter-postfix= obj.postfix
+			else if(obj.smalltop)
+				.small.small_top= obj.smalltop
+			else if(obj.small)
+				.small= obj.small
+		.box-counter__divider
+		if ( obj.title )
+			p.box-counter__title= obj.title

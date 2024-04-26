@@ -1,0 +1,39 @@
+extends  ../_skeleton
+
+//- Includes
+  
+block variables
+  - var activeCategory = 'hosting'
+  - var pageName = 'Hosting'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-13-1920x920',
+    customContent: true
+  })
+    h2 VPS Hosting
+
+    
+  // Pricing Tables
+  section.section.section-md.bg-white.text-center
+    .container
+      include ../includes/_range-pricing-modern
+  ="\n"
+    
+  // All Our Plans Include
+  section.section.section-sm.bg-white.text-center
+    .container
+      h2 All Our Plans Include
+      .row.row-30
+        include ../includes/_cols-key-features
+  ="\n"
+
+  include ../sections/_section-questions
+
+  // Page Footer
+  include ../sections/_footer-classic
+

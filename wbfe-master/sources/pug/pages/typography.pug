@@ -1,0 +1,213 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-box-alice
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Typography'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-image-1-1920x900'
+	})
+
+	// Base typography
+	section.section.section-md.bg-white
+		.container
+			.row.row-50
+				.col-lg-10.col-xl-8
+					ul.list-xl
+						li
+							h1 H1 Heading
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+						li
+							h2 H2 Heading
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+						li
+							h3 H3 Heading
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+						li
+							h4 H4 Heading
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+						li
+							h5 H5 Heading
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+						li
+							h6 H6 Heading
+							p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+	="\n"
+
+	// Blockquote
+	section.section.section-md.bg-white
+		.container
+			.row.row-50
+				.col-lg-10.col-xl-8
+					h3 Blockquote
+					article.quote-classic
+						.quote-classic__body
+							svg.quote-classic__mark( x='0px', y='0px', width='37px', height='27px', viewbox='0 0 21 15' )
+								defs
+									linearGradient(id="grad2" x1="0%" y1="0%" x2="100%" y2="0%")
+										stop(offset="0%" stop-color="#00abfa")
+										stop(offset="100%" stop-color="#00caad")
+								g
+									path(fill="url('#grad2')" d='M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316 c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37 C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316 c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37 C20.106,7.145,20.987,8.493,20.987,10.412z')
+							.quote-classic__text: p.q Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+						.quote-classic__footer
+							p.heading-5.quote-classic__cite Dennis Williams
+	="\n"
+
+	// HTML Text Elements
+	section.section.section-md.bg-white
+		.container
+			.row
+				.col-lg-10.col-xl-8
+					h3 HTML Text Elements
+					p.text-block
+						span Welcome to our wonderful world.
+						span.font-weight-bold This is a bold text
+						mark This is a highlighted text
+						span We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login
+						span.tooltip-custom(data-toggle='tooltip', data-placement="top", title="Default text") Tooltips
+						span widgets, you will definitely have a great experience of using our web page.
+						span.text-strike This is a strikethrough text
+						span.text-underline This is an underlined text.
+						a Link
+						a.link-hover Hover link
+						a.link-active Press link
+	="\n"
+
+	// Unordered List
+	section.section.section-md.bg-white
+		.container
+			.row.row-50
+				.col-xl-10
+					h3 Unordered List
+					p We specialize in a variety of services. Our aim is to deliver the top level of customer service based on your requests.
+					ul.list-marked.list_inset
+						li Consulting
+						li Customer Service
+						li Innovation
+						li Management
+						li Ethics
+					p We hope that with our services you will receive the most personalized help in purchasing any kind of products you are looking for.
+	="\n"
+
+	// Ordered List
+	section.section.section-md.bg-white
+		.container
+			.row.row-50
+				.col-xl-10
+					h3 Ordered List
+					p We specialize in a variety of services. Our aim is to deliver the top level of customer service based on your requests.
+					ol.list-ordered.list_inset
+						li Consulting
+						li Customer Service
+						li Innovation
+						li Management
+						li Ethics
+					p We hope that with our services you will receive the most personalized help in purchasing any kind of products you are looking for.
+	="\n"
+
+	// Icon List
+	section.section.section-md.bg-white.text-center.text-md-left
+		.container
+			h3 Icon List
+			.row.row-30
+				.col-md-6.col-lg-4
+					// Box Minimal
+					article.box-minimal
+						.box-minimal__icon.fa.fa-thumbs-up.icon-primary
+						h4.box-minimal__title Best Service
+						.box-minimal__text
+							p Our mission is to attract and retain customers by providing Best in Class solutions and fostering a profitable, disciplined culture of safety, service, and trust.
+
+				.col-md-6.col-lg-4
+					// Box Minimal
+					article.box-minimal
+						.box-minimal__icon.fa.fa-group.icon-secondary
+						h4.box-minimal__title Reputation
+						.box-minimal__text
+							p We have established a strong presence in the industry. Our award-winning services earn a reputation for quality and excellence that few can rival.
+
+				.col-md-6.col-lg-4
+					// Box Minimal
+					article.box-minimal
+						.box-minimal__icon.fa.fa-lock.icon-tertiary
+						h4.box-minimal__title Safety & Security
+						.box-minimal__text
+							p Safety for our employees, customers and the community we work with will always remain our primary focus in all the policies, procedures and programs.
+
+			.divider-light
+			.row.row-30
+				.col-md-6.col-lg-4
+					+box-alice({
+						icon: 'fl-bigmug-line-gear30',
+						title: 'High Quality Hardware'
+					})
+						p We use the latest hardware solutions that are updated and maintained regularly.
+
+				.col-md-6.col-lg-4
+					+box-alice({
+						icon: 'fl-bigmug-line-headphones32',
+						title: 'Dedicated 24\\7 Support'
+					})
+						p If you have a question about our domain and hosting services, use our 24/7 support.
+
+				.col-md-6.col-lg-4
+					+box-alice({
+						icon: 'fl-bigmug-line-circular229',
+						title: '30 Day Money-back Guarantee'
+					})
+						p If you are unsatisfied with our services, we will return you all your money during first 30 days.
+
+	="\n"
+
+	// Image Centered
+	section.section.section-md.bg-white
+		.container
+			.row
+				.col-lg-10.col-xl-8
+					h3 Image Centered
+					figure.figure-light
+						+jpg('typography-1-770x485', 'img-centered')
+						figcaption
+							p Reliable services
+
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+	="\n"
+
+	// Image Left
+	section.section.section-md.bg-white
+		.container
+			.row
+				.col-lg-10.col-xl-8
+					h3 Image Left
+					p
+						+jpg('typography-1-770x485')
+						| Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+	="\n"
+
+	// Image Right
+	section.section.section-md.bg-white
+		.container
+			.row
+				.col-lg-10.col-xl-8
+					h3 Image Right
+					p
+						+jpg('typography-1-770x485', 'img-right')
+						| Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+	="\n"
+
+	// Page Footer
+	include ../sections/_footer-classic

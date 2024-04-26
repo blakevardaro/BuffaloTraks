@@ -1,0 +1,13 @@
+$ORIGIN buffalotraks.com.
+$TTL 1800
+buffalotraks.com. IN SOA ns1.digitalocean.com. hostmaster.buffalotraks.com. 1573506075 10800 3600 604800 1800
+buffalotraks.com. 80 IN A 165.22.135.239
+www.buffalotraks.com. 60 IN A 165.22.135.239
+buffalotraks.com. 1800 IN MX 1 aspmx.l.google.com.
+buffalotraks.com. 1800 IN MX 5 alt1.aspmx.l.google.com.
+buffalotraks.com. 1800 IN MX 5 alt2.aspmx.l.google.com.
+buffalotraks.com. 1800 IN MX 10 alt3.aspmx.l.google.com.
+buffalotraks.com. 1800 IN MX 10 alt4.aspmx.l.google.com.
+buffalotraks.com. 60 IN NS ns1.digitalocean.com.
+buffalotraks.com. 60 IN NS ns2.digitalocean.com.
+buffalotraks.com. 60 IN NS ns3.digitalocean.com.

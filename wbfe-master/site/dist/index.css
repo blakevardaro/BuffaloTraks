@@ -1,0 +1,36 @@
+noscript {
+  align-items: center;
+  display: flex;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-display: block;
+  justify-content: center;
+  padding-top: 30px;
+  width: 100%;
+}
+
+noscript > .text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+p,
+h1,
+h3 {
+  margin: 5px 10px;
+}
+
+noscript > .img-container > img {
+  height: 200px;
+}
+body > div > div > div.paypal-button.paypal-button-number-0.paypal-button-layout-horizontal.paypal-button-shape-pill.paypal-button-branding-branded.paypal-button-number-single.paypal-button-env-sandbox.paypal-should-focus.paypal-button-label-checkout.paypal-button-color-gold.paypal-button-logo-color-blue {
+  min-width: 10rem !important;
+  border: solid red 2px !important;
+  height: 10rem !important;
+  margin: 1rem !important
+}
+
+.paypal-button-container {
+  min-width: 10rem !important;
+  border: solid red 2px;
+  height: 10rem !important;
+}

@@ -1,0 +1,44 @@
+// Our Clients
+section.section.section-md.bg-gray-light.text-center
+	+svg-gradient-defs 000
+	.container
+		h2 Our Clients
+		// Owl Carousel
+		.owl-outer-navigation-wrap.owl-carousel_nav-modern.wow.fadeIn
+			.owl-carousel.quote-creative-carousel.review-carousel(
+			data-items='1'
+			data-lg-items='2'
+			data-dots='true'
+			data-nav='true'
+			data-stage-padding='0'
+			data-loop='true'
+			data-margin='30'
+			data-mouse-drag='false'
+			data-navigation-container='#owl-carousel-nav' data-dots-each='1')
+				.item
+					// Quote Creative
+					article.quote-creative
+						.quote-creative__header
+							.quote-creative__media: +jpg('user-2-112x99')
+							.quote-creative__info
+								p.quote-creative__title Michael Johnson
+								p.quote-creative__subtitle Regular Client
+						.quote-creative__main
+							+quote-mark-2('quote-creative__mark')
+							.quote-creative__main-text
+								p TechSoft offers a high caliber of resources skilled in Microsoft Azure .NET, mobile and Quality Assurance. They became our true business partners over the past three years of our cooperation.
+
+				.item
+					// Quote Creative
+					article.quote-creative
+						.quote-creative__header
+							.quote-creative__media: +jpg('user-1-112x99')
+							.quote-creative__info
+								p.quote-creative__title Rachel Adams
+								p.quote-creative__subtitle Regular Client
+						.quote-creative__main
+							+quote-mark-2( 'quote-creative__mark' )
+							.quote-creative__main-text
+								p TechSoft is a highly skilled and uniquely capable firm with multitudes of talent on-board. We have collaborated on a number of diverse projects that have been a great success.
+
+			#owl-carousel-nav.owl-outer-navigation

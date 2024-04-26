@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+//- Includes
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Tables'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-1-1920x900'
+  })
+
+  +page-title({
+    title: pageName,
+    text: 'Tables have always been perfect for displaying facts and numbers. Now you can benefit from using them on your website.'
+  })
+    .row.justify-content-lg-center
+      .col-sm-12
+        +table('table-custom-secondary')
+  ="\n"
+
+  .divider
+    
+  section.section.section-md.bg-white.text-center
+    .container
+      +table('table-custom-bordered')
+  ="\n"
+  
+  .divider
+    
+  section.section.section-md.bg-white.text-center
+    .container
+      +table(['table-custom-striped', 'table-custom-secondary'])
+
+  section.section.section-md.bg-white.text-center
+    .divider
+  
+  // Page Footer
+  include ../sections/_footer-classic
+

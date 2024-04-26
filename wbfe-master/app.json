@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "whitebuffalo",
+            "script": "npm run start",
+            "watch": true
+        }
+    ]
+}

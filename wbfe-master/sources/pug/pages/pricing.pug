@@ -1,0 +1,40 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeCategory = 'pricing'
+  - var pageName = 'Pricing'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-5-1920x1200'
+  })
+
+  // Pricing Tables
+  section.section.section-md.bg-gray-light.text-center
+    .container
+      h2 #1
+      include ../includes/_pricing-table-classic
+  ="\n"
+
+  // Pricing Tables
+  section.section.section-md.bg-gray-light.text-center
+    .container
+      h2 #2
+      include ../includes/_range-pricing-modern
+  ="\n"
+
+  // Pricing Tables
+  section.section.section-md.bg-gray-light.text-center
+    .container
+      h2 #3
+      include ../includes/_pricing-table-creative
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

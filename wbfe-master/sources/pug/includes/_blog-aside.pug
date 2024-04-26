@@ -1,0 +1,68 @@
+.blog-layout__aside
+  .blog-layout__aside-item
+    // RD Search
+    form.rd-search.rd-search_inline.form_lg.form_outline(action='search-results.html' method='GET')
+      .form-wrap
+        label.form-label(for='rd-search-blog-form-input') Search the blog...
+        input.form-input#rd-search-blog-form-input(type='text' name='s' autocomplete='off')
+      button.button-link.fl-budicons-launch-search81(type='submit')
+
+  .blog-layout__aside-item.blog-layout__aside-item_bordered
+    p.custom-heading-line.heading-8 Categories
+    ul.list-categories
+      li.active
+        a(href='#') All categories
+        span.count 64
+      li 
+        a(href='#') Software
+        span.count 23
+      li
+        a(href='#') Development
+        span.count 10
+      li
+        a(href='#') Programming
+        span.count 10
+
+  .blog-layout__aside-item.blog-layout__aside-item_bordered
+    p.custom-heading-line.heading-8 Latest Posts
+    ul.list-posts
+      li
+        // Post Line
+        article.post-line
+          time.post-line__time(datetime='2019')
+            span.post-line__time-day 24
+            span.post-line__time-month may
+
+          .post-line__title: a(href=postLink) Startup Software Development
+      li
+        // Post Line
+        article.post-line
+          time.post-line__time(datetime='2019')
+            span.post-line__time-day 12
+            span.post-line__time-month may
+
+          .post-line__title: a(href=postLink) Hybrid Cloud Management Software Solutions
+      li
+        // Post Line
+        article.post-line
+          time.post-line__time(datetime='2019')
+            span.post-line__time-day 03
+            span.post-line__time-month may
+
+          .post-line__title: a(href=postLink) Creating Better Software Through Design Thinking
+
+  .blog-layout__aside-item.blog-layout__aside-item_bordered
+    p.custom-heading-line.heading-8 Archive
+
+    // Select 2
+    select.form-input.select(data-placeholder="All", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+      option August 2019
+      option(value="1") July 2019
+      option(value="2") June 2019
+      option(value="3") May 2019
+      option(value="4") April 2019
+      option(value="5") March 2019
+
+  .blog-layout__aside-item
+    a.link-banner(href='#')
+      +jpg('banner-305x302')

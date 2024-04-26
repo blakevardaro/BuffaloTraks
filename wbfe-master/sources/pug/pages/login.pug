@@ -1,0 +1,60 @@
+extends  ../_skeleton
+
+//- Includes
+
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Login'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-3-1920x1290'
+  })
+
+  // Login Form
+  section.section.section-md.bg-white.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          .group-sm.group-sm-justify.group-middle
+            a.button.button-facebook.button-icon.button-icon-left(href='#')
+              span.icon.fa.fa-facebook
+              | Facebook
+            a.button.button-twitter.button-icon.button-icon-left(href='#')
+              span.icon.fa.fa-twitter
+              | Twitter
+            a.button.button-google.button-icon.button-icon-left(href='#')
+              span.icon.fa.fa-google-plus
+              | Google+
+          .text-decoration-lines
+            span.text-decoration-lines__content or
+  
+          // RD Mailform
+          form.rd-mailform.rd-mailform_label-centered
+            .form-wrap
+              label.form-label-outside(for="login-email") E-mail
+              input#login-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+  
+            .form-wrap
+              label.form-label-outside(for="login-password") Password
+              input#login-password.form-input(type="password" name="pass" data-constraints="@Required")
+  
+            .form-wrap
+              label.checkbox-inline
+                input(type='checkbox')
+                | Remember Me 
+  
+            .row.row-20.form-wrap
+              .col-md-6
+                button(type="submit").button.btn-primary.button-block.button-ujarak Login
+              .col-md-6
+                button.button.btn-primary-outline.button-block.button-ujarak Create an Account
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

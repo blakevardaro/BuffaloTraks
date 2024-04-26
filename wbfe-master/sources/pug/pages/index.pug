@@ -1,0 +1,19 @@
+extends  ../_skeleton
+
+//- Includes
+
+include ../includes/_counter
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Home'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  include ../sections/_section-slider-classic
+  include ../sections/_section-content-classic
+
+  // Page Footer
+  include ../sections/_footer-classic

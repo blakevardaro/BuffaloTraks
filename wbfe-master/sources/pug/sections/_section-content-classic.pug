@@ -1,0 +1,130 @@
+include ../includes/_counter
+
+// Our service
+section.section.section-lg.bg-white.text-center
+	.container
+		h2 Our Services
+		.row.row-30.justify-content-md-center
+			.col-md-6.col-lg-4
+				// Box Chloe
+				article.box-chloe.box-chloe_secondary
+					.box-chloe__icon.linearicons-window
+					.box-chloe__main
+						h4.box-chloe__title Windows Applications
+						p We design and develop a variety of applications for Windows including specialized and custom software.
+						a.button.button-sm.button-default.button-ujarak(href='hosting.html') View Details
+
+			.col-md-6.col-lg-4
+				// Box Chloe
+				article.box-chloe.box-chloe_secondary
+					.box-chloe__icon.linearicons-database-check
+					.box-chloe__main
+						h4.box-chloe__title Database Management
+						p TechSoft provides top-notch database management solutions for small and medium businesses worldwide.
+						a.button.button-sm.button-default.button-ujarak(href='hosting.html') View Details
+
+			.col-md-6.col-lg-4
+				// Box Chloe
+				article.box-chloe.box-chloe_secondary
+					.box-chloe__icon.linearicons-vector
+					.box-chloe__main
+						h4.box-chloe__title UX & UI Design
+						p Our team of UX designers creates easy-to-understand interfaces for all kinds of applications.
+						a.button.button-sm.button-default.button-ujarak(href='hosting.html') View Details
+
+
+			.col-md-6.col-lg-4
+				// Box Chloe
+				article.box-chloe.box-chloe_secondary
+					.box-chloe__icon.linearicons-desktop
+					.box-chloe__main
+						h4.box-chloe__title iOS/MacOS Apps
+						p Our company also develops multipurpose applications for iOS and MacOS systems and devices.
+						a.button.button-sm.button-default.button-ujarak(href='hosting.html') View Details
+
+
+			.col-md-6.col-lg-4
+				// Box Chloe
+				article.box-chloe.box-chloe_secondary
+					.box-chloe__icon.linearicons-bug
+					.box-chloe__main
+						h4.box-chloe__title QA & Testing
+						p We pay a lot of attention to QA and Testing procedures to ensure the best quality of our software.
+						a.button.button-sm.button-default.button-ujarak(href='hosting.html') View Details
+
+
+			.col-md-6.col-lg-4
+				// Box Chloe
+				article.box-chloe.box-chloe_secondary
+					.box-chloe__icon.linearicons-tablet2
+					.box-chloe__main
+						h4.box-chloe__title Android Applications
+						p Our Android apps are highly rated by media and our users as they offer great features on all Android devices.
+						a.button.button-sm.button-default.button-ujarak(href='hosting.html') View Details
+
+
+="\n"
+
+// Pricing Tables
+section.section.section-md.bg-gray-2.text-center.oh
+	.container.wow.fadeInUpSmall
+		h2 Pricing Plans
+		include ../includes/_pricing-table-classic
+="\n"
+
+// Why Choose Us
+section.section.section-sm.bg-white.text-center
+	.container
+		h2 Why Choose Us
+		.row.row-30.wow.fadeIn
+			include ../includes/_cols-key-features
+="\n"
+
+// Facts
++parallax-section({
+	img: 'bg-2-1920x545'
+})
+	.section-lg.text-center.text-sm-left
+		.container
+			.row.row-50.flex-md-row-reverse.justify-content-md-between.align-items-center.align-items-lg-start
+				.col-md-5.wow.fadeInRightSmall
+					.box-width-3.box-centered
+						h2 Some Facts About Us
+						p.text-style-1 More than 1000 applications developed
+						a.button.button-lg.btn-primary.button-ujarak(href='newIndex.html') Read More
+				.col-md-7.col-lg-6.wow.fadeInLeftSmall
+					.row.row-style-1
+						.col-sm-6: .col-inner
+							// Box counter
+							+counter({
+								icon: 'linearicons-outbox',
+								prefix: '1.',
+								value: '6',
+								small: 'k',
+								title: 'Apps Installed'
+							})
+						.col-sm-6: .col-inner
+							// Box counter
+							+counter({
+								icon: 'linearicons-diamond2',
+								value: '27',
+								title: 'Awards Won'
+							})
+						.col-sm-6: .col-inner
+							+counter({
+								icon: 'linearicons-user',
+								value: '45',
+								title: 'Staff Members',
+								postfix: '+'
+							})
+						.col-sm-6: .col-inner
+							+counter({
+								icon: 'linearicons-heart',
+								value: '99',
+								title: 'Satisfied Customers',
+								smalltop: '%'
+							})
+="\n"
+
+include ../sections/_section-our-clients
+include ../sections/_section-partners

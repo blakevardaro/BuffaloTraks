@@ -1,0 +1,15 @@
+mixin inline-subscribe-form(obj)
+  -  var uniquePrefix = subscribeFormCounter
+  if (obj.customUnique)
+    - var uniquePrefix = obj.customUnique
+  else
+    - subscribeFormCounter = subscribeFormCounter + 1
+
+
+  // RD Mailform
+  form.rd-mailform.form_inline(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php' class=obj.classMod)
+    .form-wrap
+      input.form-input(id="subscribe-form-" + uniquePrefix + "-email" type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for=id="subscribe-form-" + uniquePrefix + "-email") Your E-mail
+    .form-button
+      button.button(type="submit" class=obj.customBtnClasses ? obj.customBtnClasses : ' button-lg button-default button-ujarak') Subscribe

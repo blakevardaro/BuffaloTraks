@@ -1,0 +1,31 @@
+extends  ../_skeleton
+
+//- Includes
+
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = '404 Page'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: ['404'],
+    bgImage: 'bg-image-6-1920x750'
+  })
+
+  // 404
+  section.section.section-md.bg-white.text-center
+    .container
+      h3 Sorry, but the page was not found 
+      p.ls-05 You may have mistyped the address or the page may have moved
+      .group-sm.group-middle
+        a.button.button-default.button-ujarak(href='index.html') Go to home page
+        a.button.button-primary.button-ujarak(href='contact-us.html') Contact us
+            
+  ="\n"
+
+  include ../sections/_footer-classic

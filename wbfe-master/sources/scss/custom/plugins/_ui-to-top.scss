@@ -1,0 +1,51 @@
+/*
+*
+* ToTop
+* 
+*/
+
+.ui-to-top {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 38px;
+  color: $white;
+  @include gradient-horizontal( $secondary-light, $primary-light );
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+  transition: .4s all ease-in;
+  transform: translateY(100px);
+
+  &:hover {
+    color: $white;
+    background: $secondary-light;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $white;
+  }
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+html.mobile .ui-to-top,
+html.tablet .ui-to-top {
+  display: none !important;
+}
+
+@include media-breakpoint-up(sm) {
+  .ui-to-top {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+

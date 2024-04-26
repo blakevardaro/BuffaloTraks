@@ -1,0 +1,95 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+  
+block variables
+  - var activeCategory = 'blog'
+  - var pageName = 'Blog'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-15-1920x860'
+  })
+     
+  // Blog
+  section.section.section-lg.bg-white.text-center
+    .container
+      article.blog-layout
+        .blog-layout__main
+          // Post Classic
+          article.post-classic
+            h3.post-classic__title: a(href=postLink) Benefits of Async/Await in Programming
+            ul.post-classic__meta
+              li
+                span.icon.mdi.mdi-calendar-blank
+                a(href=postLink): time(datetime='2019') May 12, 2019
+              li
+                span.icon.mdi.mdi-comment-outline
+                a(href=postLink) 450 comments
+              li
+                span.icon.mdi.mdi-account
+                span by
+                a(href='#') John Doe
+                
+            .post-classic__media
+              a.post-classic__figure(href=postLink)
+                +jpg('blog-post-1-715x417', 'post-classic__image')
+                
+          // Post Classic
+          article.post-classic
+            h3.post-classic__title: a(href=postLink) Key Considerations and Warnings of iPaaS
+            ul.post-classic__meta
+              li
+                span.icon.mdi.mdi-calendar-blank
+                a(href=postLink): time(datetime='2019') May 12, 2019
+              li
+                span.icon.mdi.mdi-comment-outline
+                a(href=postLink) 450 comments
+              li
+                span.icon.mdi.mdi-account
+                span by
+                a(href='#') John Doe
+                
+            .post-classic__media
+              a.post-classic__figure(href=postLink)
+                +png('blog-post-2-715x417', 'post-classic__image')
+                
+          // Post Classic
+          article.post-classic 
+            h3.post-classic__title: a(href=postLink) Usage of Hibernate Query Language (HQL)
+            ul.post-classic__meta
+              li
+                span.icon.mdi.mdi-calendar-blank
+                a(href=postLink): time(datetime='2019') May 12, 2019
+              li
+                span.icon.mdi.mdi-comment-outline
+                a(href=postLink) 450 comments
+              li
+                span.icon.mdi.mdi-account
+                span by
+                a(href='#') John Doe
+                
+            .post-classic__media
+              a.post-classic__figure(href=postLink)
+                +jpg('blog-post-3-715x417', 'post-classic__image')
+                
+          .pagination
+            .pagination__control: a(href='#') Older posts
+            ul.pagination__list
+              li: a(href='#') 1
+              li.active: a(href='#') 2
+              li: a(href='#') 3
+            .pagination__control: a(href='#') Newer posts
+             
+            
+        include ../includes/_blog-aside
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic
+

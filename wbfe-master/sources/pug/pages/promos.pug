@@ -1,0 +1,106 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-box-alice
+  
+block variables
+  - var activeCategory = 'promos'
+  - var pageName = 'Promos'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-14-1920x330'
+  })
+    
+  // Promos
+  section.section.section-md.bg-white.text-center
+    .container
+      .row.row-30
+        .col-md-6.col-lg-4
+          // Promo Classic
+          article.promo-classic
+            .promo-classic__inner
+              .promo-classic__icon-wrap: .promo-classic__icon: span.fl-bigmug-line-file69
+              .promo-classic__main
+                .promo-classic__label 
+                  svg.promo-classic__label-svg(x='0px', y='0px', width='51px', height='23px', viewbox='0 0 51 23' preserveAspectRatio='xMaxYMin')
+                    polygon(points='0.012,0.006 0.012,22.995 43.991,22.995 43.991,23 50.988,11.5 43.991,0 43.991,0.006 ')
+                  span -25%
+                h4.promo-classic__title Windows Applications
+  
+                .promo-classic__divider 
+                  
+                .promo-classic__price
+                  span.promo-classic__price-currency $
+                  span.promo-classic__price-value 126
+                  .promo-classic__price-aside
+                    span.top 99
+                    span.bottom year
+                    
+                p.promo-classic__price-old Old Price $200.00
+                
+                .promo-classic__control
+                  a.button.button-primary.button-ujarak(href='#') Order now
+                  
+        .col-md-6.col-lg-4
+          // Promo Classic
+          article.promo-classic
+            .promo-classic__inner
+              .promo-classic__icon-wrap: .promo-classic__icon: span.fl-bigmug-line-hot67
+              .promo-classic__main
+                .promo-classic__label.promo-classic__label-sm 
+                  svg.promo-classic__label-svg(x='0px', y='0px', width='51px', height='23px', viewbox='0 0 51 23' preserveAspectRatio='xMaxYMin')
+                    polygon(points='0.012,0.006 0.012,22.995 43.991,22.995 43.991,23 50.988,11.5 43.991,0 43.991,0.006 ')
+                  span Free Trial
+                h4.promo-classic__title iOS & Android Apps
+
+                .promo-classic__divider 
+                  
+                .promo-classic__price 
+                  span.promo-classic__price-currency $
+                  span.promo-classic__price-value 0
+                  .promo-classic__price-aside
+                    span.top 99
+                    span.bottom mon
+                    
+                p.promo-classic__price-old Old Price $100.00
+                
+                .promo-classic__control
+                  a.button.button-primary.button-ujarak(href='#') Order now
+                  
+        .col-md-6.col-lg-4
+          // Promo Classic
+          article.promo-classic
+            .promo-classic__inner
+              .promo-classic__icon-wrap: .promo-classic__icon.promo-classic__icon-sm: span.fl-bigmug-line-email64
+              .promo-classic__main 
+                .promo-classic__label  
+                  svg.promo-classic__label-svg(x='0px', y='0px', width='51px', height='23px', viewbox='0 0 51 23' preserveAspectRatio='xMaxYMin')
+                    polygon(points='0.012,0.006 0.012,22.995 43.991,22.995 43.991,23 50.988,11.5 43.991,0 43.991,0.006 ')
+                  span -50%
+                h4.promo-classic__title QA & Testing Services
+  
+                .promo-classic__divider 
+                  
+                .promo-classic__price
+                  span.promo-classic__price-currency $
+                  span.promo-classic__price-value 45
+                  .promo-classic__price-aside
+                    span.top 99
+                    span.bottom mon
+                    
+                p.promo-classic__price-old Old Price $150.00
+                
+                .promo-classic__control
+                  a.button.button-primary.button-ujarak(href='#') Order now
+              
+          
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic
+

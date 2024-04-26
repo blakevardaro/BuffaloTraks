@@ -1,0 +1,36 @@
+include ../includes/_counter
+// Facts
++parallax-section({
+	img: 'bg-3-1920x480'
+})
+	.section-lg.text-center
+		.container
+			h2 Some Facts About Us
+			p.text-style-1 More than 1000 apps developed
+			.row.row-30.offset-top-1
+				.col-sm-6.col-md-3
+					+counter-classic({
+						prefix: '1.',
+						value: '6',
+						small: 'k',
+						title: 'Apps Installed'
+					})
+
+				.col-sm-6.col-md-3
+					+counter-classic({
+						value: '27',
+						title: 'Awards Won'
+					})
+				.col-sm-6.col-md-3
+					+counter-classic({
+						value: '45',
+						title: 'Staff Members',
+						small: '+'
+					})
+
+				.col-sm-6.col-md-3
+					+counter-classic({
+						value: '99',
+						title: 'Satisfied Customers',
+						smalltop: '%'
+					})

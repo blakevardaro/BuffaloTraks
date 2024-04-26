@@ -1,0 +1,36 @@
+//- Progress Bar linear
+	@param {object} data
+	@param {string} data.title
+	@param {number} data.value
+mixin progress-linear( data )
+	//Linear progress bar
+	.progress-linear( data-daration= data.duration )&attributes( attributes )
+		.progress-linear-header
+			p.progress-linear-title= data.title
+			span.progress-linear-counter= data.value
+		.progress-linear-body
+			.progress-linear-bar
+
+
+mixin svg-circle
+	svg.svg-circle-gradient
+		defs
+			lineargradient#grad-1(x1="0%" y1="0%" x2="0%" y2="100%")
+				stop(offset="0%" stop-color="#00caad")
+				stop(offset="100%" stop-color="#00aafc")
+
+
+//- Circle progress bar
+	@param {object} data
+	@param {string} data.title
+	@param {number} data.value
+mixin progress-circle( data )
+	//Circle progress bar
+	.progress-circle&attributes( attributes )
+		.progress-circle-block
+			svg.progress-circle-bar( x='0', y='0', width='194', height='194', viewbox='0 0 150 150' )
+				circle.progress-circle-bg( cx=75, cy=75, r=70 )
+				circle.progress-circle-fg.clipped( cx=75, cy=75, r=70  stroke="url(#grad-1)")
+			.progress-circle-counter= data.value
+		if (data.title)
+			p.progress-circle-title= data.title

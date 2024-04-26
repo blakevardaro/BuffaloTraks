@@ -1,0 +1,85 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-progress-bar-linear
+include ../includes/_counter
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Progress bars'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-image-1-1920x900'
+	})
+
+	// Page title
+	section.section.section-lg.bg-white
+		.container
+			.row.row-50.justify-content-md-center
+				.col-xl-9
+					.page-title.text-center
+						h3 Progress Bars, Skill Bars, Counters
+						p.big These elements are vital to every website’s design, and with them you are able to improve the overall look of your resource and attract more clients.
+
+		.container
+			.row.justify-content-md-center.flex-lg-row-reverse.justify-content-xl-between.row-50
+				.col-md-10.col-lg-6.col-xl-5
+					h4 Welcome to Our Website
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+				.col-md-10.col-lg-6
+					+progress-linear({
+						title: "Knowledge",
+						value: "75"
+					})
+
+					+progress-linear({
+						title: "Dedication",
+						value: "85"
+					})
+
+					+progress-linear({
+						title: "Professionalism",
+						value: "80"
+					})
+	="\n"
+	include ../sections/_section-about-facts
+
+
+
+	// Circle Progress Bars
+	section.section.section-md.bg-white.text-center
+		+svg-circle({})
+		.container
+			.row.row-50
+				.col-sm-6.col-lg-3
+					+progress-circle({
+						title: 'PROFESSIONALISM',
+						value: 73
+					})
+				.col-sm-6.col-lg-3
+					+progress-circle({
+						title: 'Cooperation',
+						value: 12
+					})
+
+				.col-sm-6.col-lg-3
+					+progress-circle({
+						title: 'Innovation and creativity',
+						value: 13
+					})
+
+				.col-sm-6.col-lg-3
+					+progress-circle({
+						title: 'Resilience',
+						value: 59
+					})
+
+
+	// Page Footer
+	include ../sections/_footer-classic

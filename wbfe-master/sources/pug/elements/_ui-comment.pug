@@ -1,0 +1,20 @@
+mixin comment(obj)
+  // Comment
+  article.comment
+    .comment__figure
+      +jpg(obj.img, 'comment__image')
+    .comment__main
+      .comment__header
+        h5.comment__title=obj.title
+        span.comment__time=obj.time
+      .comment__text: p=obj.text
+      .comment__footer
+        ul.comment__list
+          li 
+            a.comment__link(href='#') 
+              span.icon.mdi.mdi-thumb-up-outline 
+              span=obj.likes ? obj.likes : '32'
+          li
+            a.comment__link(href='#')
+              span.icon.mdi.mdi-comment-outline
+              span Reply

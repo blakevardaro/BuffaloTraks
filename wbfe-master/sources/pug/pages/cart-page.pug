@@ -1,0 +1,140 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Cart page'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  // Your Order
+  section.section.section-md.bg-image.bg-image-dark.text-center(style='background-image: url(images/bg-image-16-1920x850.jpg);')
+    .container
+      h2 Your Order
+  ="\n"
+    
+  // Search results
+  section.section-md.section.bg-white
+    .container
+      // Bootstrap tabs 
+      #tabs-cart.tabs-custom.tabs-horizontal.tabs-bordered
+        // Nav tabs
+        ul.nav.nav-tabs
+          li.nav-item: a.nav-link.active(href='#tabs-cart-1' data-toggle='tab') 01 Cart
+          li.nav-item: a.nav-link(href='#tabs-cart-2' data-toggle='tab') 02 Register
+          li.nav-item: a.nav-link(href='#tabs-cart-3' data-toggle='tab') 03 Payment
+
+        // Tab panes
+        .tab-content
+          div#tabs-cart-1.tab-pane.fade.show.active
+            // Box summary
+            article.box-summary
+              .box-summary__row
+                .box-summary__details
+                  p Plan
+                  p.box-summary__subject Optimal
+                  
+                .box-summary__aside: .box-summary__aside-inner
+                  p.box-summary__price $599.00
+                  button.box-summary__remove 
+                
+              .box-summary__row 
+                .box-summary__details: p Total to pay:
+                .box-summary__aside: .box-summary__aside-inner
+                  p.box-summary__price.box-summary__price-total $599.00
+                
+              .box-summary__footer
+                .rd-form-wrap
+                  // RD Form
+                  form.rd-form.form_inline.form_lg
+                    .form-wrap
+                      input.form-input(id='promo-code' type='text' name='promo-code')
+                      label.form-label(for='promo-code') Promo code
+                    .form-button
+                      button.button.button-lg.button-primary.button-ujarak(type='submit') Apply
+                    .form-button
+                      a.button.button-lg.button-primary-bordered(href='#') Next step
+                
+                
+          div#tabs-cart-2.tab-pane.fade
+            .row.justify-content-md-center
+              .col-md-10.col-lg-8.col-xl-6.d-flex.flex-column.justify-content-center.align-items-center
+                .group-sm.group-sm-justify.group-middle.text-center
+                  a.button.button-facebook.button-icon.button-icon-left(href='#')
+                    span.icon.fa.fa-facebook
+                    | Facebook
+                  a.button.button-twitter.button-icon.button-icon-left(href='#')
+                    span.icon.fa.fa-twitter
+                    | Twitter
+                  a.button.button-google.button-icon.button-icon-left(href='#')
+                    span.icon.fa.fa-google-plus
+                    | Google+
+                .text-decoration-lines
+                  span.text-decoration-lines__content or
+    
+                // RD Mailform
+                form.rd-form.rd-mailform.rd-mailform_label-centered
+                  .form-wrap
+                    label.form-label-outside(for="login-email") E-mail
+                    input#login-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+    
+                  .form-wrap
+                    label.form-label-outside(for="login-password") Password
+                    input#login-password.form-input(type="password" name="pass" data-constraints="@Required")
+    
+                  .form-wrap
+                    label.checkbox-inline
+                      input(type='checkbox')
+                      | Remember Me 
+    
+                  .row.row-20.form-wrap
+                    .col-md-6
+                      button.button.button-primary.button-block.button-ujarak(type="submit") Login
+                    .col-md-6
+                      button.button.button-default.button-block.button-ujarak Create an Account
+                      
+                    .col-sm-12.text-right
+                      a.button.button-lg.button-primary-bordered.button-ujarak(href='#') Next step
+                      
+          div#tabs-cart-3.tab-pane.fade
+            .row.row-50.justify-content-md-center.justify-content-lg-start
+              .col-md-10.col-lg-6
+                h4 Payment Methods 
+                article.box-bordered
+                  .box-bordered__content
+                    ul.list-xs
+                      li.form-wrap
+                        label.radio-inline
+                          input(name='radio-group-1' value='radio-1' type='radio' checked='')
+                          | Direct Bank Transfer
+                        p Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the payment is complete. 
+                      li.form-wrap
+                        label.radio-inline
+                          input(name='radio-group-1' value='radio-2' type='radio')
+                          | PayPal
+                      li.form-wrap
+                        label.radio-inline
+                          input(name='radio-group-1' value='radio-3' type='radio')
+                          | Cheque Payment
+                        
+              .col-md-10.col-lg-6
+                h4 Cart Total
+                article.box-bordered
+                  table.box-bordered__table
+                    tr
+                      td Cart subtotal
+                      td $580
+                    tr
+                      td Sale
+                      td $20
+                    tr
+                      td Total
+                      td $560
+                                          
+            .offset-top-1.text-center
+              a.button.button-lg.button-primary.button-ujarak(href='#') Go to Payment
+  ="\n"
+  
+  // Page Footer
+  include ../sections/_footer-classic

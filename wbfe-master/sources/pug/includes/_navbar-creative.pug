@@ -1,0 +1,60 @@
+// RD Navbar
+.rd-navbar-wrap
+  nav.rd-navbar.rd-navbar-creative(data-layout='rd-navbar-fixed',
+  data-sm-layout='rd-navbar-fixed',
+  data-sm-device-layout='rd-navbar-fixed',
+  data-md-layout='rd-navbar-fixed',
+  data-md-device-layout='rd-navbar-fixed',
+  data-lg-device-layout='rd-navbar-fixed',
+  data-lg-layout='rd-navbar-static',
+  data-xl-device-layout='rd-navbar-static',
+  data-xl-layout='rd-navbar-static',
+  data-stick-up-clone='false',
+  data-md-stick-up-offset='74px',
+  data-lg-stick-up-offset='66px',
+  data-md-stick-up='true', 
+  data-lg-stick-up='true' 
+  class=navbarInverse ? 'rd-navbar_inverse' : '')
+    .rd-navbar-aside-outer: .rd-navbar-aside.rd-navbar-content-outer
+      .rd-navbar-content__toggle.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-content'): span
+      .rd-navbar-content
+        ul.rd-navbar-content__list
+          li
+            span.icon.icon-sm.icon-darker.fl-bigmug-line-headphones32
+            dl.list-terms-inline
+              dt 24/7 Support
+              dd: a(href='tel:#') 1-800-700-6200
+          li
+            span.icon.icon-xs-2.icon-darker.fl-bigmug-line-email64
+            dl.list-terms-inline
+              dt E-mail
+              dd: a(href='mailto:#') mail@demolink.org
+
+          li
+            span.icon.icon-sm.icon-darker.fl-bigmug-line-chat55
+            dl.list-terms-inline
+              dt Social Media
+              dd
+                ul.list-inline.list-inline-xs
+                  li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-facebook(href='#')
+                  li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-twitter(href='#')
+                  li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-google-plus(href='#')
+                  li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-pinterest-p(href='#')
+          li
+            span.icon.icon-xs-3.icon-darker.fl-bigmug-line-login12
+            a(href='login.html') Login
+
+    .rd-navbar-main-outer: .rd-navbar-main
+      // RD Navbar Panel
+      .rd-navbar-panel
+        button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+        // RD Navbar Brand
+        .rd-navbar-brand
+          a.brand(href='index.html')
+            .brand__name
+              +png(logoDefault, 'brand__logo-dark')
+              +png(logoInverse, 'brand__logo-light')
+
+      // RD Navbar Nav Wrap
+      .rd-navbar-nav-wrap
+        include ../includes/_navigation

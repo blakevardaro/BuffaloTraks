@@ -1,0 +1,136 @@
+#WhitePaper > header > div.fan-block.green-block {
+  background-color: #890016 !important;
+}
+#WhitePaper > header > div.fan-block.purple-block {
+  background-color: #ffb400 !important;
+}
+#WhitePaper > header > div.fan-block.main-block {
+  background-color: #e2e2e2 !important;
+}
+#WhitePaper > header > div.fan-block.black-block {
+  background-color: #1e1d1d !important;
+  height: 33%;
+  width: 8rem;
+  margin-left: 1rem;
+}
+#introduction > div.background-layer {
+  background-color: #010d88;
+}
+.wbtextContainer {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  margin-top: 4rem;
+}
+.wbtext {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  font-size: 4.2rem !important;
+}
+#introducing-whitebuffalo > div.background-layer {
+  background-color: #890016;
+}
+#the-libra-blockchain > div.background-layer {
+  background-color: #ffb400 !important;
+}
+#the-libra-currency-and-reserve > div.background-layer {
+  background-color: #bcbcbc !important;
+}
+#the-libra-association > div.background-layer {
+  background-color: #010d88;
+}
+#what-is-next-for-libra > div.background-layer {
+  background-color: #890016;
+}
+#how-to-get-involved > div.background-layer {
+  background-color: #ffb400 !important;
+}
+#conclusion > div.background-layer {
+  background-color: #bcbcbc !important;
+}
+#introduction > section > div.container > aside > ul > li.active > a {
+  color: #010d88;
+}
+#introducing-whitebuffalo > section > div.container > aside > ul > li.active > a {
+  color: #890016;
+}
+#the-libra-blockchain > section > div.container > aside > ul > li.active > a {
+  color: #ffb400 !important;
+}
+#the-libra-currency-and-reserve > section > div.container > aside > ul > li.active > a {
+  color: #000000;
+}
+#the-libra-association > section > div.container > aside > ul > li.active > a {
+  color: #010d88;
+}
+#what-is-next-for-libra > section > div.container > aside > ul > li.active > a {
+  color: #890016;
+}
+#how-to-get-involved > section > div.container > aside > ul > li.active > a {
+  color: #ffb400 !important;
+}
+#how-to-get-involved > section > div.container > aside > ul > li.active > a {
+  color: #000000;
+}
+#conclusion > section > div.container > aside > ul > li.active > a {
+  color: #000000;
+}
+#TRAK\$\>CREDITS > div.background-layer {
+  background-color: #bcbcbc !important;
+}
+#TRAK\$\>CREDITS > section > div.container > aside > ul > li.active > a {
+  color: #000000 !important;
+}
+#CLASSES\ OF\ PROGRAMMABLE\ TRAK\$ > div.background-layer {
+  background-color: #010d88;
+}
+#CLASSES\ OF\ PROGRAMMABLE\ TRAK\$ > section > div.container > aside > ul > li.active {
+  color: #010d88;
+}
+#THE\ INFCA\ TRIBAL\ RESERVE\ SYSTEM > div.background-layer {
+  background-color: #890016;
+}
+#THE\ INFCA\ TRIBAL\ RESERVE\ SYSTEM > section > div.container > aside > ul > li.active {
+  color: #890016;
+}
+#WHITE\ BUFFALO\ CO-OP > div.background-layer {
+  background-color: #ffb400 !important;
+}
+#WHITE\ BUFFALO\ CO-OP > section > div.container > aside > ul > li.active {
+  color: #ffb400 !important;
+}
+#CO-OP\ PATRON\ OPPORTUNITIES\ AND\ REWARDS > div.background-layer {
+  background-color: #bcbcbc !important;
+}
+#CO-OP\ PATRON\ OPPORTUNITIES\ AND\ REWARDS > section > div.container > aside > ul > li.active {
+  color: #000000 !important;
+}
+#eCoup\.COM\:\ \ “DIGITAL\ VILLAGE”\ PLATFORM\ AND\ USE-CASE > div.background-layer {
+  background-color: #010d88;
+}
+#eCoup\.COM\:\ \ “DIGITAL\ VILLAGE”\ PLATFORM\ AND\ USE-CASE > section > div.container > aside > ul > li.active {
+  color: #010d88;
+}
+#TRAK\$\ USE-CASES > div.background-layer {
+  background-color: #890016;
+}
+#TRAK\$\ USE-CASES > section > div.container > aside > ul > li.active {
+  color: #890016;
+}
+#TRAK\$\ PLATFORM\ TECH\ STACK > div.background-layer {
+  background-color: #ffb400 !important;
+}
+#TRAK\$\ PLATFORM\ TECH\ STACK > section > div.container > aside > ul > li.active {
+  color: #ffb400 !important;
+}
+#TRAK\$\ BLOCKCHAIN > div.background-layer {
+  background-color: #bcbcbc !important;
+}
+#TRAK\$\ BLOCKCHAIN > section > div.container > aside > ul > li.active {
+  color: #000000 !important;
+}
+
+div.title-container > h1 {
+  font-size: 4.4rem;
+}

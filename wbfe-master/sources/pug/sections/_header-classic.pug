@@ -1,0 +1,74 @@
+header.section.page-header
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-classic(
+		data-layout='rd-navbar-fixed',
+		data-sm-layout='rd-navbar-fixed',
+		data-sm-device-layout='rd-navbar-fixed',
+		data-md-layout='rd-navbar-fixed',
+		data-md-device-layout='rd-navbar-fixed',
+		data-lg-device-layout='rd-navbar-fixed',
+		data-lg-layout='rd-navbar-static',
+		data-xl-device-layout='rd-navbar-static',
+		data-xl-layout='rd-navbar-static',
+		data-stick-up-clone='false',
+		data-md-stick-up-offset='74px',
+		data-lg-stick-up-offset='66px',
+		data-md-stick-up='true',
+		data-lg-stick-up='true')
+			.rd-navbar-outer
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+						// RD Navbar Brand
+						.rd-navbar-brand
+							a.brand(href='index.html')
+								.brand__name
+									+png(logoDefault, 'brand__logo-dark')
+									+png(logoMobile, 'brand__logo-mobile')
+
+
+					.rd-navbar-body
+						// RD Navbar Aside
+						.rd-navbar-aside
+							.rd-navbar-content-outer
+								.rd-navbar-content__toggle.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-content'): span
+								.rd-navbar-content
+									ul.list-bordered.list-inline
+										li
+											dl.list-terms-inline
+												dt 24/7 Support
+												dd: a(href='tel:#') 1-800-700-6200
+										li
+											dl.list-terms-inline
+												dt E-mail
+												dd: a(href='mailto:#') mail@demolink.org
+
+										li
+											ul.list-inline.list-inline-xs
+												li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-facebook(href='#')
+												li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-twitter(href='#')
+												li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-google-plus(href='#')
+												li: a.icon.icon-gray-dark.icon-style-brand.fa.fa-pinterest-p(href='#')
+
+							.rd-navbar-panel__button
+								a.button.button-xs.button-icon.button-icon-left.button-default.button-ujarak(href='login.html')
+									span.icon.mdi.mdi-account
+									| Login
+
+						// RD Navbar Nav Wrap
+						.rd-navbar-nav-wrap
+							.rd-navbar-element
+								// RD Navbar Search
+								.rd-navbar-search.rd-navbar-search-toggled
+									button.rd-navbar-search-toggle(data-rd-navbar-toggle=".rd-navbar-search")
+									form.rd-search(action="search-results.html" data-search-live="rd-search-results-live" method="GET")
+										.form-wrap
+											input.form-input(id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off")
+										button.rd-navbar-search-submit(type='submit')
+										label.form-label(for="rd-navbar-search-form-input") Search...
+										#rd-search-results-live.rd-search-results-live
+
+							include ../includes/_navigation
+="\n"

@@ -1,0 +1,31 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-box-alice
+
+block variables
+	- var activeCategory = 'services'
+	- var pageName = 'Services'
+
+block page
+	include ../sections/_header-classic
+	// Get a Domain Name
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-image-12-1920x238'
+	})
+	section.section.section-lg.text-center
+		.container
+			include ../includes/_range-pricing-modern
+	section.section.section-sm.bg-white.text-center
+		.container
+			h2 Why Choose Us
+			.row.row-30.wow.fadeIn
+				include ../includes/_cols-key-features
+
+	include ../sections/_section-questions
+
+	// Page Footer
+	include ../sections/_footer-classic
+

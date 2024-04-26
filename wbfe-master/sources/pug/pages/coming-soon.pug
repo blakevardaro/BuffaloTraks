@@ -1,0 +1,28 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-inline-subscribe-form
+include ../includes/_countdown
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Coming Soon'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  // Coming Soon
+  section.section.section-xl.bg-image.bg-image-dark.text-center(style='background-image: url(images/bg-image-7-1920x710.jpg)')
+    .container
+      h3 We’re getting ready to launch in
+      .row.justify-content-center
+        .col-xl-8
+          +countdown({ to: '2020-12-31' })
+          h5 Stay tuned and subscribe to our newsletter
+          +inline-subscribe-form({
+            classMod: 'box-width-2 box-centered form_inline-centered'
+          })
+      
+  ="\n"
+
+  include ../sections/_footer-classic

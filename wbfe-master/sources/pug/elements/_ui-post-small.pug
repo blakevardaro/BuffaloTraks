@@ -1,0 +1,10 @@
+mixin post-small(obj)
+  // Post small
+  article.post-small
+    .post-small__aside
+      a.post-small__media(href=obj.postLink ? obj.postLink: postLink)
+        +jpg(obj.img, 'post-small__image')
+    .post-small__main
+      p.post-small__title: a(href=obj.postLink ? obj.postLink: postLink)=obj.title
+      time.post-small__time(datetime=obj.time.datetime)=obj.time.datevalue
+      

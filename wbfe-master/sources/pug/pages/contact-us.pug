@@ -1,0 +1,81 @@
+extends  ../_skeleton
+
+//- Includes
+
+
+block variables
+  - var activeCategory = 'contact-us'
+  - var pageName = 'Contact Us'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    bgImage: 'bg-image-8-1920x1000'
+  })
+
+  // Contact Form 
+  section.section.section-md.bg-white
+    .container.container_bigger 
+      .row.justify-content-md-center.justify-content-xl-between.row-2-columns-bordered.row-50
+        .col-md-10.col-lg-5
+          h3 Get in Touch
+          ul.list-creative
+            li
+              dl.list-terms-medium.list-terms-medium_secondary
+                dt Address
+                dd: a(href='#') 212 Moore Ave, Brooklyn, NY, United States
+            li
+              dl.list-terms-medium
+                dt Phones
+                dd
+                  ul.list-comma
+                    li: a(href='tel:#') +1-800-700-6200 
+                    li: a(href='tel:#') +1-800-955-4567
+            li
+              dl.list-terms-medium.list-terms-medium_tertiary
+                dt E-mails
+                dd
+                  ul.list-comma
+                    li: a(href='mailto:#') support@demolink.org
+                    li: a(href='mailto:#') office@demolink.org
+          
+        .col-md-10.col-lg-7.col-xl-6
+          h3.text-center Contact Form
+          // RD Mailform 
+          form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .row.align-items-md-end.row-30
+              .col-md-6 
+                .form-wrap
+                  input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                  label.form-label(for="contact-name") Your Name
+
+              .col-md-6
+                .form-wrap
+                  input#contact-phone.form-input(type="text" name="phone" data-constraints='@PhoneNumber')
+                  label.form-label(for="contact-phone") Phone
+
+              .col-sm-12
+                .form-wrap
+                  label.form-label(for="contact-message") Your Message
+                  textarea#contact-message.form-input(name="message" data-constraints="@Required")
+
+              .col-md-6
+                .form-wrap
+                  input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="contact-email") E-mail
+
+              .col-md-6
+                button(type="submit").button.button-block.button-primary.button-ujarak Send Message
+  ="\n"
+
+  // RD Google Map
+  section.section
+    .google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-styles='[{"featureType":"poi","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]}]' )
+      .google-map
+      ul.google-map-markers
+        li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+  // Page Footer
+  include ../sections/_footer-classic
